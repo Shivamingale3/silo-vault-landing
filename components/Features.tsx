@@ -23,7 +23,7 @@ export default function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Feature 1 */}
           <div className="glass-panel p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#1c2438]/80 hover:border-border-highlight">
-            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-gradient-to-br from-[#4a8cff] to-[#1e50ff]">
+            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-linear-to-br from-primary-main to-[#1e50ff]">
               <LockKey weight="fill" />
             </div>
             <h3 className="text-[20px] mb-3 font-heading font-semibold text-white">
@@ -37,7 +37,7 @@ export default function Features() {
 
           {/* Feature 2 */}
           <div className="glass-panel p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#1c2438]/80 hover:border-border-highlight">
-            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-gradient-to-br from-[#9d4aff] to-[#501eff]">
+            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-linear-to-br from-[#9d4aff] to-[#501eff]">
               <Notebook weight="fill" />
             </div>
             <h3 className="text-[20px] mb-3 font-heading font-semibold text-white">
@@ -51,7 +51,7 @@ export default function Features() {
 
           {/* Feature 3 */}
           <div className="glass-panel p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#1c2438]/80 hover:border-border-highlight">
-            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-gradient-to-br from-[#ff4a82] to-[#ff1e4a]">
+            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-linear-to-br from-[#ff4a82] to-[#ff1e4a]">
               <Fingerprint weight="fill" />
             </div>
             <h3 className="text-[20px] mb-3 font-heading font-semibold text-white">
@@ -65,7 +65,7 @@ export default function Features() {
 
           {/* Feature 4 */}
           <div className="glass-panel p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-[#1c2438]/80 hover:border-border-highlight">
-            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-gradient-to-br from-[#00e676] to-[#00b259]">
+            <div className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center text-[28px] text-white mb-6 bg-linear-to-br from-success-main to-[#00b259]">
               <CloudArrowUp weight="fill" />
             </div>
             <h3 className="text-[20px] mb-3 font-heading font-semibold text-white">

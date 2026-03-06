@@ -31,7 +31,7 @@ export default function Navbar({
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0e17]/85 backdrop-blur-[20px] py-4 border-b border-white/10"
+          ? "bg-bg-dark/85 backdrop-blur-[20px] py-4 border-b border-white/10"
           : "py-5"
       }`}
     >
@@ -90,7 +90,7 @@ export default function Navbar({
 
       {/* Mobile Menu Content */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#0a0e17]/95 backdrop-blur-md border-b border-white/10 p-5 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-bg-dark/95 backdrop-blur-md border-b border-white/10 p-5 flex flex-col gap-4">
           <Link
             href="#features"
             className="text-text-muted font-medium text-[16px] py-2"

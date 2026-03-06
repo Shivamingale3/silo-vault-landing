@@ -15,11 +15,11 @@ export default function Hero({
   version: string;
 }) {
   return (
-    <header className="min-h-[100vh] flex items-center pt-[100px] pb-[60px]">
+    <header className="min-h-screen flex items-center pt-[100px] pb-[60px]">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
         <div className="hero-text">
           <div
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#4a8cff]/10 border border-[#4a8cff]/20 rounded-full text-[13px] font-medium text-[#a3c4ff] mb-6 animate-fade-in-up"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-primary-main/10 border border-primary-main/20 rounded-full text-[13px] font-medium text-[#a3c4ff] mb-6 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
             <span className="w-1.5 h-1.5 bg-primary-main rounded-full shadow-[0_0_8px_var(--color-primary-main)]"></span>{" "}
@@ -79,7 +79,7 @@ export default function Hero({
           className="relative flex justify-center animate-fade-in-up"
           style={{ animationDelay: "0.6s" }}
         >
-          <div className="w-[320px] h-[650px] rounded-[24px] p-3 bg-gradient-to-br from-white/10 to-white/5 shadow-[0_30px_60px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] relative z-10 [transform:perspective(1000px)_rotateY(-15deg)_rotateX(5deg)] transition-transform duration-500 hover:[transform:perspective(1000px)_rotateY(-5deg)_rotateX(2deg)]">
+          <div className="w-[320px] h-[650px] rounded-[24px] p-3 bg-linear-to-br from-white/10 to-white/5 shadow-[0_30px_60px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.2)] relative z-10 transform-[perspective(1000px)_rotateY(-15deg)_rotateX(5deg)] transition-transform duration-500 hover:transform-[perspective(1000px)_rotateY(-5deg)_rotateX(2deg)]">
             <div className="bg-bg-dark h-full w-full rounded-2xl overflow-hidden border border-white/5 relative">
               <Image
                 src="/app_images/home_dark.jpeg"

@@ -24,8 +24,8 @@ export default function AppGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {screenshots.map((shot, index) => (
             <div key={index} className="relative group perspective-1000">
-              <div className="w-[260px] h-[550px] mx-auto rounded-[24px] p-2 bg-gradient-to-br from-white/10 to-white/5 border border-white/10 shadow-2xl transition-all duration-500 ease-out group-hover:-translate-y-4 group-hover:scale-105 group-hover:shadow-[0_20px_40px_rgba(74,140,255,0.2)]">
-                <div className="bg-bg-dark h-[100%] w-[100%] rounded-2xl overflow-hidden relative">
+              <div className="w-[260px] h-[550px] mx-auto rounded-[24px] p-2 bg-linear-to-br from-white/10 to-white/5 border border-white/10 shadow-2xl transition-all duration-500 ease-out group-hover:-translate-y-4 group-hover:scale-105 group-hover:shadow-[0_20px_40px_rgba(74,140,255,0.2)]">
+                <div className="bg-bg-dark h-full w-full rounded-2xl overflow-hidden relative">
                   <Image
                     src={shot.src}
                     alt={shot.alt}
