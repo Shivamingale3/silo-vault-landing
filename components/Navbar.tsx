@@ -59,6 +59,12 @@ export default function Navbar({
             Features
           </Link>
           <Link
+            href="#screenshots"
+            className="text-text-muted font-medium text-[15px] hover:text-white transition-colors"
+          >
+            Screenshots
+          </Link>
+          <Link
             href="#security"
             className="text-text-muted font-medium text-[15px] hover:text-white transition-colors"
           >
@@ -91,6 +97,13 @@ export default function Navbar({
             onClick={() => setMobileMenuOpen(false)}
           >
             Features
+          </Link>
+          <Link
+            href="#screenshots"
+            className="text-text-muted font-medium text-[16px] py-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Screenshots
           </Link>
           <Link
             href="#security"

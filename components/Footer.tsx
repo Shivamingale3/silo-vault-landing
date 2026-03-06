@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({
+  downloadUrl,
+  version,
+}: {
+  downloadUrl: string;
+  version: string;
+}) {
   return (
     <footer className="border-t border-border-light pt-16 pb-8">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -36,6 +42,12 @@ export default function Footer() {
                 className="block text-text-muted text-[14px] mb-3 transition-colors duration-200 hover:text-primary-main"
               >
                 Releases
+              </a>
+              <a
+                href={downloadUrl}
+                className="block text-primary-main font-semibold text-[14px] mb-3 transition-colors duration-200 hover:text-white"
+              >
+                Download App {version}
               </a>
               <a
                 href="#"

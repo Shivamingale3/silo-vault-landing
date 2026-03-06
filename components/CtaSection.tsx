@@ -1,4 +1,13 @@
-export default function CtaSection({ downloadUrl }: { downloadUrl: string }) {
+"use client";
+import { GooglePlayLogo } from "@phosphor-icons/react";
+
+export default function CtaSection({
+  downloadUrl,
+  version,
+}: {
+  downloadUrl: string;
+  version: string;
+}) {
   return (
     <section className="py-[100px]">
       <div className="max-w-[1200px] mx-auto px-6 relative">
@@ -11,10 +20,11 @@ export default function CtaSection({ downloadUrl }: { downloadUrl: string }) {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="#download"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-[16px] transition-all duration-300 bg-primary-main text-white shadow-[0_4px_20px_var(--color-primary-glow)] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(74,140,255,0.6)] hover:bg-[#3a75e0]"
+              href={downloadUrl}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-[15px] transition-all duration-300 bg-primary-main text-white border border-transparent shadow-[0_4px_20px_var(--color-primary-glow)] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(74,140,255,0.6)] hover:bg-[#3a75e0]"
             >
-              Download App
+              <GooglePlayLogo weight="fill" className="text-xl" /> Download{" "}
+              {version}
             </a>
             <a
               href="https://github.com/Shivamingale3/silo-vault"

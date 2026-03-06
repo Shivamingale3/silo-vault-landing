@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import AppGallery from "@/components/AppGallery";
 import Security from "@/components/Security";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
@@ -18,9 +19,10 @@ export default async function Home() {
       <Navbar downloadUrl={downloadUrl} version={version} />
       <Hero downloadUrl={downloadUrl} version={version} />
       <Features />
+      <AppGallery />
       <Security />
-      <CtaSection downloadUrl={downloadUrl} />
-      <Footer />
+      <CtaSection downloadUrl={downloadUrl} version={version} />
+      <Footer downloadUrl={downloadUrl} version={version} />
     </main>
   );
 }
