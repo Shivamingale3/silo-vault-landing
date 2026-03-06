@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg-dark: #0a0e17;
+  --color-bg-card: rgba(20, 26, 40, 0.6);
+  --color-bg-card-hover: rgba(28, 36, 56, 0.8);
+  --color-border-light: rgba(255, 255, 255, 0.08);
+  --color-border-highlight: rgba(255, 255, 255, 0.15);
+
+  --color-primary-main: #4a8cff;
+  --color-primary-glow: rgba(74, 140, 255, 0.4);
+  --color-secondary-main: #242c40;
+  --color-success-main: #00e676;
+
+  --color-text-main: #f8f9fa;
+  --color-text-muted: #9ba1ad;
+
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite backwards;
+  --animate-pulse-slow: pulse-slow 3s cubic-bezier(0.21, 0.53, 0.56, 0.8)
+    infinite;
+  --animate-fade-in-up: fadeInUp 0.5s ease backwards;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: #fff;
+  line-height: 1.2;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, #a2b0ce 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ambient-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(74, 140, 255, 0.15) 0%,
+    rgba(10, 14, 23, 0) 70%
+  );
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.top-glow {
+  top: -200px;
+  left: -100px;
+}
+
+.bottom-glow {
+  bottom: 20%;
+  right: -200px;
+  background: radial-gradient(
+    circle,
+    rgba(135, 100, 255, 0.1) 0%,
+    rgba(10, 14, 23, 0) 70%
+  );
+}
+
+.glass-panel {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-light);
+  border-radius: 24px;
+}
