@@ -1,4 +1,4 @@
-import { ShieldCheck } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,7 +7,13 @@ export default function Footer() {
         <div className="flex justify-between flex-wrap gap-10 mb-16">
           <div className="max-w-[300px]">
             <div className="flex items-center gap-2.5 font-heading font-bold text-[20px] tracking-[-0.5px] mb-4 text-white">
-              <ShieldCheck weight="fill" className="text-[28px]" />
+              <Image
+                src="/app_images/app_logo.png"
+                alt="Silo Vault Logo"
+                width={28}
+                height={28}
+                className="rounded-[6px]"
+              />
               <span>Silo Vault</span>
             </div>
             <p className="text-text-muted text-[14px]">

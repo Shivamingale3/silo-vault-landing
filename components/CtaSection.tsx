@@ -1,4 +1,4 @@
-export default function CtaSection() {
+export default function CtaSection({ downloadUrl }: { downloadUrl: string }) {
   return (
     <section className="py-[100px]">
       <div className="max-w-[1200px] mx-auto px-6 relative">

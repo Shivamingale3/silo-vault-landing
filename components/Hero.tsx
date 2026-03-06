@@ -7,34 +7,13 @@ import {
   CloudCheck,
 } from "@phosphor-icons/react/dist/ssr";
 
-async function getLatestRelease() {
-  try {
-    const res = await fetch(
-      "https://api.github.com/repos/Shivamingale3/silo-vault/releases/latest",
-      {
-        next: { revalidate: 3600 }, // Cache for 1 hour
-      },
-    );
-    if (!res.ok) throw new Error("Failed to fetch release");
-    const data = await res.json();
-    return {
-      version: data.tag_name,
-      downloadUrl:
-        data.assets?.[0]?.browser_download_url ||
-        "https://github.com/Shivamingale3/silo-vault/releases/latest",
-    };
-  } catch (error) {
-    return {
-      version: "Latest",
-      downloadUrl:
-        "https://github.com/Shivamingale3/silo-vault/releases/latest",
-    };
-  }
-}
-
-export default async function Hero() {
-  const { downloadUrl } = await getLatestRelease();
-
+export default function Hero({
+  downloadUrl,
+  version,
+}: {
+  downloadUrl: string;
+  version: string;
+}) {
   return (
     <header className="min-h-[100vh] flex items-center pt-[100px] pb-[60px]">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
@@ -69,8 +48,8 @@ export default async function Hero() {
               href={downloadUrl}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-[15px] transition-all duration-300 bg-primary-main text-white border border-transparent shadow-[0_4px_20px_var(--color-primary-glow)] hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(74,140,255,0.6)] hover:bg-[#3a75e0]"
             >
-              <GooglePlayLogo weight="fill" className="text-xl" /> Download for
-              Android
+              <GooglePlayLogo weight="fill" className="text-xl" /> Download{" "}
+              {version}
             </a>
             <a
               href="https://github.com/Shivamingale3/silo-vault"

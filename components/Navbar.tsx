@@ -1,10 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ShieldCheck, List, X } from "@phosphor-icons/react";
+import { List, X } from "@phosphor-icons/react";
 import Link from "next/link";
+import Image from "next/image";
 
-export default function Navbar() {
+export default function Navbar({
+  downloadUrl,
+  version,
+}: {
+  downloadUrl: string;
+  version: string;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,9 +40,12 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2.5 font-heading font-bold text-[20px] tracking-[-0.5px]"
         >
-          <ShieldCheck
-            weight="fill"
-            className="text-primary-main text-[28px]"
+          <Image
+            src="/app_images/app_logo.png"
+            alt="Silo Vault Logo"
+            width={28}
+            height={28}
+            className="rounded-[6px]"
           />
           <span>Silo Vault</span>
         </Link>
@@ -54,12 +64,12 @@ export default function Navbar() {
           >
             Security
           </Link>
-          <Link
-            href="#download"
+          <a
+            href={downloadUrl}
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-[15px] transition-all duration-300 bg-transparent text-white border border-white/10 hover:bg-white/5 hover:border-white"
           >
-            Get Early Access
-          </Link>
+            Download {version}
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -89,13 +99,13 @@ export default function Navbar() {
           >
             Security
           </Link>
-          <Link
-            href="#download"
+          <a
+            href={downloadUrl}
             className="inline-flex items-center justify-center w-full px-6 py-3 mt-2 rounded-xl font-semibold text-[15px] transition-all bg-transparent text-white border border-white/10"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Get Early Access
-          </Link>
+            Download {version}
+          </a>
         </div>
       )}
     </nav>
