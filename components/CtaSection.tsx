@@ -1,5 +1,4 @@
-"use client";
-import { GooglePlayLogo } from "@phosphor-icons/react";
+import { GooglePlayLogo } from "@phosphor-icons/react/dist/ssr";
 
 export default function CtaSection({
   downloadUrl,
